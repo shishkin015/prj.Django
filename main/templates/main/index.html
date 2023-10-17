@@ -5,10 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+<img src="/static/images/14.png" width="100px" alt="14">
 <h1>Hi Savva!!!</h1>
 <br>
-<from method="post">
-    {% csrf_token %}
+<form method="post">
+	{% csrf_token %}
     <input type="text" name="name" /><br>
     <input type="email" name="email" /><br>
     <textarea name="message"></textarea><br>
