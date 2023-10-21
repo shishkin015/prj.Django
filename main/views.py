@@ -1,16 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView
 
 from main.models import Student
 
 
-# Create your views here.
-def index(request):
-    students_list = Student.objects.all()
-    context = {
-        'object_list': students_list,
-        'title': 'Главная'
-    }
-    return render(request, 'main/index.html', context)
+class StudentListView(ListView):
+    model = Student
+    template_name = 'main/index.html'
+
 
 def contact(request):
     if request.method == 'POST':
@@ -23,3 +20,17 @@ def contact(request):
         'title': 'Контакт'
     }
     return render(request, 'main/contact.html', context)
+
+
+class StudentDetailView(DetailView):
+    model = Student
+    template_name = 'main/student_detail.html'
+
+# def view_student(request, pk):
+#     """Просмотр одного студента"""
+#     students_item = get_object_or_404(Student, pk=pk)
+#     context = {
+#         'object': students_item,
+#         'title': 'Студент'
+#     }
+#     return render(request, 'main/student_detail.html', context)
