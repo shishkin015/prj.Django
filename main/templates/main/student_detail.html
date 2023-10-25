@@ -1,30 +1,41 @@
 {% extends 'main/base.html' %}
 {% load my_tags %}
 {% block content %}
-<div class="col">
-    <div class="card mb-4 box-shadow">
-        <div class="card-body">
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Информация студента</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Имя</th>
+                            <td>{{ object.first_nami|title }}</td>
+                        </tr>
+                        <tr>
+                            <th>Фамилия</th>
+                            <td>{{ object.last_name|title }}</td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            {% if object.is_active %}
+                            <td>Учится</td>
+                            {% else %}
+                            <td><span class="text-muted">Не yчится</span></td>
+                            {% endif %}
+                        </tr>
+                    </table>
+                    <div class="card-footer">
+                        <a type="button" href="{% url 'main:index' %}" class="btn btn-dark">К списку студентов</a>
+                    </div>
+                </div>
+                <div class="card-header"></div>
+            </div>
+        </div>
+        <div class="col-6">
             <img class="card-img-top" src="{{ object.avatar|mymedia}}" alt="Card image cap">
-            <table class="table table-borderless">
-                <tbody>
-                    <tr>
-                        <th>Имя</th>
-                        <td>{{ object.first_nami|title }}</td>
-                    </tr>
-                    <tr>
-                        <th>Фамилия</th>
-                        <td>{{ object.last_name|title }}</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        {% if object.is_active %}
-                        <td>Учится</td>
-                        {% else %}
-                        <td><span class="text-muted">Не yчится</span></td>
-                        {% endif %}
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </div>

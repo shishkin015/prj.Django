@@ -7,14 +7,17 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            Информация материала "{{object.title}}"
+                            Информация материала "{{object.title}}" ({{ object.slug }})
                         </h3>
                     </div>
                     <div class="card-body">
                         <p>
                             {{ object.body }}
                         </p>
-                        <a href="{% url 'materials:list' %}" class="btn bth-warning">Назад</a>
+                        <a type="button" href="{% url 'materials:list' %}" class="btn btn-dark">К списку матерьялов</a>
+                    </div>
+                    <div class="card-footer">
+                        <span class="text-muted">Просмотры: {{ object.views_count }}</span>
                     </div>
                  </div>
             </div>
