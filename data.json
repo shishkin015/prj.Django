@@ -1,82 +1,75 @@
 [
   {
     "model": "main.student",
-    "pk": 1,
+    "pk": 21,
     "fields": {
       "first_nami": "Savva",
       "last_name": "Shishkin",
       "avatar": "students/Снимок_экрана_от_2023-10-12_19-01-44.png",
+      "email": "savva@sky.pro",
       "is_active": true
     }
   },
   {
     "model": "main.student",
-    "pk": 2,
-    "fields": {
-      "first_nami": "Kristina",
-      "last_name": "Shishkina",
-      "avatar": "students/Снимок_экрана_от_2023-10-16_22-31-23.png",
-      "is_active": true
-    }
-  },
-  {
-    "model": "main.student",
-    "pk": 3,
+    "pk": 23,
     "fields": {
       "first_nami": "Savva",
       "last_name": "Shishkin",
       "avatar": "students/Снимок_экрана_от_2023-10-12_19-01-44_n4jQJlj.png",
-      "is_active": true
-    }
-  },
-  {
-    "model": "main.student",
-    "pk": 4,
-    "fields": {
-      "first_nami": "Savva",
-      "last_name": "Shishkin",
-      "avatar": "students/Снимок_экрана_от_2023-10-12_19-01-44_ISb1D2j.png",
-      "is_active": true
-    }
-  },
-  {
-    "model": "main.student",
-    "pk": 5,
-    "fields": {
-      "first_nami": "Kristina",
-      "last_name": "Shishkina",
-      "avatar": "students/Снимок_экрана_от_2023-10-16_22-31-23.png",
-      "is_active": true
-    }
-  },
-  {
-    "model": "main.student",
-    "pk": 6,
-    "fields": {
-      "first_nami": "Semen",
-      "last_name": "Semenov",
-      "avatar": "",
+      "email": null,
       "is_active": false
     }
   },
   {
     "model": "main.student",
-    "pk": 7,
+    "pk": 24,
     "fields": {
-      "first_nami": "Petr",
-      "last_name": "Klushev",
+      "first_nami": "Semen",
+      "last_name": "Semenov",
       "avatar": "",
+      "email": "semenov@sky.pro",
+      "is_active": false
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 27,
+    "fields": {
+      "first_nami": "Sasha",
+      "last_name": "Shishkin",
+      "avatar": "students/Снимок_экрана_от_2023-10-23_22-51-12.png",
+      "email": null,
       "is_active": true
     }
   },
   {
     "model": "main.student",
-    "pk": 8,
+    "pk": 38,
     "fields": {
-      "first_nami": "Sasha",
-      "last_name": "Romanov",
-      "avatar": "",
+      "first_nami": "Kristina",
+      "last_name": "Shishkina",
+      "avatar": "students/Снимок_экрана_от_2023-10-16_22-31-23_bHLT8xl.png",
+      "email": null,
       "is_active": true
+    }
+  },
+  {
+    "model": "main.subject",
+    "pk": 1,
+    "fields": {
+      "title": "Python",
+      "description": "Django Python",
+      "student": 24
+    }
+  },
+  {
+    "model": "main.subject",
+    "pk": 2,
+    "fields": {
+      "title": "Python",
+      "description": "Debag",
+      "student": 24
     }
   }
 ]
