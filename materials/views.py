@@ -35,7 +35,7 @@ class MaterialUpdateView(UpdateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('materialsм:view', args=[self.kwargs.get('pk')])
+        return reverse('materials:view', args=[self.kwargs.get('pk')])
 
 
 class MaterialDeleteView(DeleteView):

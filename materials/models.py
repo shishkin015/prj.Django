@@ -2,6 +2,7 @@ from django.db import models
 
 NULLABLE = {'blank': True, 'null': True}
 
+
 class Material(models.Model):
     title = models.CharField(max_length=150, verbose_name='название')
     body = models.TextField(verbose_name='содержимое')

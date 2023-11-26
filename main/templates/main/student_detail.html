@@ -30,6 +30,15 @@
                             <td><span class="text-muted">Не yчится</span></td>
                             {% endif %}
                         </tr>
+                        <tr>
+                            <th>Список предметов :</th>
+                            {% for subject in subjects %}
+                            <tr>
+                            <th></th>
+                                <td>{{ subject }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tr>
                     </table>
                     <div class="card-footer">
                         <a type="button" href="{% url 'main:index' %}" class="btn btn-dark">К списку студентов</a>

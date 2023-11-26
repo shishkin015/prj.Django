@@ -10,12 +10,16 @@ class StyleFormMixin:
             field.widget.attrs['class'] = 'form-control'
 
 
-class StudentForm(StyleFormMixin, forms.ModelForm):
+class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
         # fields = '__all__'  # все поля для редактирования
         fields = ('first_nami', 'last_name', 'email')  # определенные поля для редактирования
         # exclude = ('is_active',)  # исключить поле из редактирования
+        widgets = {
+            'date': forms.DateInput(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'title'}),
+        }
 
     def clean_email(self):
         clean_data = self.cleaned_data['email']
